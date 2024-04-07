@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="assets/popup-styles.css" />
+    </head>
+    <body>
+        <script src="lib/Sortable.min.js"></script>
+
+        <div id="button-container">
+            <button id="select-all-button" disabled>
+                <span class="select-all-icon"> </span>
+                Select all
+            </button>
+            <button id="deselect-all-button" disabled>
+                <span class="select-none-icon"> </span>
+                Select none
+            </button>
+            <button id="copy-button" disabled>
+                <span class="copy-icon"> </span>
+                Copy
+            </button>
+            <button id="copy-with-url-button" disabled>
+                <span class="copy-with-url-icon"> </span>
+                Copy<br />
+                with URL
+            </button>
+            <button id="merge-button" disabled>
+                <span class="merge-icon"> </span>
+                Merge
+            </button>
+            <button id="merge-with-url-button" disabled>
+                <span class="merge-with-url-icon"> </span>
+                Merge<br />
+                with URL
+            </button>
+            <button id="delete-button" disabled>
+                <span class="delete-icon"> </span>
+                Delete
+            </button>
+            <button id="toggle-order-button" disabled>
+                <span class="toggle-order-icon"> </span>
+                Toggle Order
+            </button>
+        </div>
+        <div id="error-message"></div>
+        <div id="clips"></div>
+
+        <template id="clipTemplate">
+            <div class="clip" data-id="0">
+                <div class="left-column">
+                    <button class="clip-button copy"></button>
+                    <button class="clip-button copy-with-url"></button>
+                </div>
+                <div class="center-column">
+                    <span class="clip-text"></span>
+                    <input type="hidden" value="0" />
+                    <span class="expand-icon">&#11208;</span>
+                </div>
+                <div class="right-column">
+                    <button class="clip-button delete"></button>
+                </div>
+                <a class="bottom-row url" href=""></a>
+            </div>
+        </template>
+
+        <script type="module" src="init.js"></script>
+    </body>
+</html>
